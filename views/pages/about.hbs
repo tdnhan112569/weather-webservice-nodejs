@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{{title}}</title>
+        <link rel='icon' href="./img/about.png">
+        <link rel="stylesheet" href="./css/styles.css">
+    </head>
+    <body>
+        <div class="main-content">
+            {{>header}}
+            {{!-- <img class="portrait" src="./img/hoanho.png"/> --}}
+
+            <img class="portrait" src="{{data.url}}"/>
+
+            {{!-- {{{imgTag}}} --}}
+
+            <p>Create by {{author}}</p>
+
+            <ul class="people_list">
+                {{#each people}}
+                    <li>{{this}}</li>
+                {{/each}}
+            </ul>
+        </div>
+        {{>footer}}
+    </body>
+</html>
